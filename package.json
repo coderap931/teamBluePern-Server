@@ -1,0 +1,11 @@
+{
+  "name": "teambluepern-server",
+  "version": "1.0.0",
+  "description": "EFA BlueBadge PERN project Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
