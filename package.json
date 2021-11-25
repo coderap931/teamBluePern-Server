@@ -3,6 +3,24 @@
   "version": "1.0.0",
   "description": "EFA BlueBadge PERN project Client",
   "main": "index.js",
+  "dependencies": {
+    "accepts": "^1.3.7",
+    "array-flatten": "^1.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "buffer-writer": "^2.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "lru-cache": "^6.0.0",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "postgres-interval": "^1.2.0",
+    "sequelize": "^6.9.0",
+    "split2": "^3.2.2",
+    "xtend": "^4.0.2",
+    "yallist": "^4.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
