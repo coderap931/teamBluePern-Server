@@ -3,11 +3,11 @@ const router = express.Router();
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-//TODO incorporate adding an email to the user and check if it works
+
 //! Register endpoint
 router.post("/register", async (req, res) => {
     try {
-        const { username, email, passwordhash } = req.body.user;
+        const { username, passwordhash } = req.body.user;
         //encrypt user passwordhash here
         console.log(username, passwordhash); //test
         const salt = bcrypt.genSaltSync(12); //generating the salt
@@ -16,7 +16,6 @@ router.post("/register", async (req, res) => {
         console.log(pwHashed)//test
         const newUser = await User.create({ //await user creation
             username: username, //define username clearly
-            email: email, //fine email clearly
             passwordhash: pwHashed //define passwordhash as pwHashed 
         });
 
@@ -40,22 +39,19 @@ router.post("/register", async (req, res) => {
 //! Login endpoint
 router.post("/login", async (req, res) => {
     const { username, passwordhash } = req.body.user;
-    // where username or email is equal to the username or email in the request body
 
     try {
         const user = await User.findOne({
             where: {
-                $or: [
-                    { username: username },
-                    { email: username }
-                ],
+                username,
         },
             });
         //compare our passwordhash to the DB passwordhash for the user
-         // "(passwordhash," calls into parameter in 36. "user.passwordhash)" refers to line 39 and stepping into the object
-        console.log("Username: ", user.username, "Email :", user.email);
+         // "(passwordhash," calls into parameter in 36, "user.passwordhash)" refers to line 39 and stepping into the object
+        console.log(user.username);
         // depending on userAuth value 0/1 we proceed or throw
         //TODO generate jwt for the user and save it to database
+        // const hashpasswordhash = jwt.sign({})
         if (!user.username) {
             //* If userAuth (the passwordhash) is not right, run this...(lines 56-59)
             res.status(401).json({
