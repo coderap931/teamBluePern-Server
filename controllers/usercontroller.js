@@ -3,6 +3,7 @@ const router = express.Router();
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { Op } = require("sequelize");
 //TODO incorporate adding an email to the user and check if it works
 //! Register endpoint
 router.post("/register", async (req, res) => {
@@ -39,18 +40,15 @@ router.post("/register", async (req, res) => {
 
 //! Login endpoint
 router.post("/login", async (req, res) => {
-    const { username, passwordhash } = req.body.user;
+    const { username, email, passwordhash } = req.body.user;
     // where username or email is equal to the username or email in the request body
 
     try {
         const user = await User.findOne({
             where: {
-                $or: [
-                    { username: username },
-                    { email: username }
-                ],
-        },
-            });
+                [Op.or]: [{ username }, { email }]
+            }
+    });
         //compare our passwordhash to the DB passwordhash for the user
          // "(passwordhash," calls into parameter in 36. "user.passwordhash)" refers to line 39 and stepping into the object
         console.log("Username: ", user.username, "Email :", user.email);
@@ -70,6 +68,7 @@ router.post("/login", async (req, res) => {
         
         res.status(200).json({
             username: user.username,
+            email: user.email,
             message: "User successfully logged in!",
             user: User,
             sessionToken: token
@@ -79,7 +78,7 @@ router.post("/login", async (req, res) => {
         console.log(error)
         res.status(500).json({
             message: "Failed to log user in"
-        })
+        });
     }
 });
 
