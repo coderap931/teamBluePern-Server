@@ -6,7 +6,7 @@ Technology Used:
 
               [ note technology and purposes ]
 
-Team Member #1  [Adam Patrick]
+**Team Member #1  [Adam Patrick]**
 
         Github: https://github.com/coderap931
         LinkedIn: https://www.linkedin.com/in/adam-patrick-06a970159/
@@ -33,14 +33,14 @@ Completion Date: WIP / [completion date]
 [date]: [focused items / files]
 [date]: [focused items / files]
 
-Server components: games table, model, and controller, and headers middleware
+Server components: games table, model, and controller
  
 
-Team Member #2  [Alex Myers]
+**Team Member #2  [Alex Myers]**
 
-              Github: https://github.com/Alex-Lee-Myers
-              LinkedIn: linkedin.com/in/alexleemyers
-              Portfolio: https://alex-lee-myers.github.io/
+              **Github:** https://github.com/Alex-Lee-Myers
+              **LinkedIn:** linkedin.com/in/alexleemyers
+              **Portfolio:** https://alex-lee-myers.github.io/
 
 **Assigned Tasks**
 
