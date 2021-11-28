@@ -28,11 +28,6 @@ Completion Date: WIP / [completion date]
 [date]: [focused items / files]
 [date]: [focused items / files]
 
-Endpoint: /game/delete
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
-
 Server components: games table, model, and controller
  
 
@@ -64,6 +59,12 @@ Team Member #3  [Jaylen Wilson]
               GitHub, LinkedIn, and Portfolio links
 
 Assigned Tasks
+
+
+Endpoint: /game/delete
+Completion Date: WIP / [completion date]
+[date]: [focused items / files]
+[date]: [focused items / files]
 
 Endpoint: /game/listAll
 Completion Date: WIP / [completion date]
