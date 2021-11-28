@@ -1,3 +1,4 @@
+
 require("dotenv").config();
 const express = require("express");
 const db = require("./db");
@@ -25,3 +26,4 @@ db.authenticate()
         console.error(err);
     });
 // testing push
+
