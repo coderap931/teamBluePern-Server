@@ -9,7 +9,7 @@ const controllers = require("./controllers");
 app.use(express.json());
 
 app.use("/user", controllers.usercontroller);
-// app.use("/game", controllers.gamecontroller);
+app.use("/game", controllers.gamecontroller);
 
 db.authenticate()
     .then(() => db.sync({ force: true })) // => {force: true}
