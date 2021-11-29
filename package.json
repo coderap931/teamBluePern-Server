@@ -1,5 +1,16 @@
 {
   "name": "teambluepern-server",
+  "author": "Team C: Adam, Alex, and Jaylen",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderap931/teamBluePern-Server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coderap931/teamBluePern-Server/issues"
+  },
+  "homepage": "https://github.com/coderap931/teamBluePern-Server#readme",
   "version": "1.0.0",
   "description": "EFA BlueBadge PERN project Client",
   "main": "index.js",
@@ -25,7 +36,5 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon"
-  },
-  "author": "Team C: Adam, Alex, and Jaylen",
-  "license": "ISC"
+  }
 }
