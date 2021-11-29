@@ -1,10 +1,12 @@
-const {Sequelize} = require('sequelize');
+const { Sequelize } = require('sequelize');
 
 // Initialize sequelize
 //TODO - Change the database name and password
 // const db = new Sequelize("postgres://postgres:[PASSWORDchangeHERE]@localhost:5432/[DATABASEnameHERE]");
 //! |  ACTIVE SEQUELIZE PROFILE  |
-const db = new Sequelize("postgres://postgres:3b04286994094749b256047b28aae114@localhost:5432/teamBluePern");
+//* Adam's GamingTower
+//const db = new Sequelize("postgres://postgres:5d170bf185294620b01d4a0dbda02af1@localhost:5432/teamBluePern");
+const db = new Sequelize("postgres://postgres:562613@localhost:5432/teamBluePern");
 // ______________________________
 // |                              |
 //! |  DATABASE DIFFERENT CONFIGURATIONS   |

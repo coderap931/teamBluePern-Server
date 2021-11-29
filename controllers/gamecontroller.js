@@ -59,11 +59,12 @@ router.put('/edit=:gameId', validateJWT, async (req, res) => {
 })
 
 
-router.get('/all', async (req, res) => {
+router.get('/all', validateJWT, async (req, res) => {
+    const ownerId = req.user.id;
     try {
-        const Games = await Games.findAll({
+        const Games = await Game.findAll({
             where: {
-                owner_id: req.user.id
+                owner_id: ownerId
             }
         })
         res.status(200).json({
@@ -77,12 +78,12 @@ router.get('/all', async (req, res) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateJWT, async (req, res) => {
+    const gameId = req.params.id;
     try {
         const Games = await Game.findOne({
             where: {
-                id: req.params.id,
-                owner_id: req.user.id,
+                id: gameId
             }
         })
         res.status(200).json({
@@ -96,7 +97,7 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.delete('/remove/:id', async (req, res) => {
+router.delete('/remove/:id', validateJWT, async (req, res) => {
     const ownerId = req.user.id;
     const gameId = req.params.id;
 
@@ -116,7 +117,6 @@ router.delete('/remove/:id', async (req, res) => {
         res.status(500).json({ error: err });
     }
 })
-
 
 
 module.exports = router;
