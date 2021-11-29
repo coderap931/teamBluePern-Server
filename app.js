@@ -12,7 +12,7 @@ app.use("/user", controllers.usercontroller);
 // app.use("/game", controllers.gamecontroller);
 
 db.authenticate()
-    .then(() => db.sync({ force: true })) // => {force: true}
+    .then(() => db.sync()) // => {force: true}
 
     .then(() => {
     app.listen(3000, () =>
