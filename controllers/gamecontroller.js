@@ -4,9 +4,12 @@ const router = express.Router();
 let validateJWT = require('../middleware/validate-jwt');
 const { Game } = require('../models');
 
+
+
 router.post('/create', validateJWT, async (req, res) => {
     const { name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags } = req.body.game;
     const { id } = req.user;
+
     const gameEntry = {
         name,
         boxart,
@@ -23,6 +26,7 @@ router.post('/create', validateJWT, async (req, res) => {
         const newGame = await Game.create(gameEntry);
         res.status(200).json(newGame);
     } catch (err) {
+        res.status(500).json({ error: err });
         res.status(500).json({ error: err });
     }
 });
@@ -117,6 +121,7 @@ router.delete('/remove/:id', validateJWT, async (req, res) => {
         res.status(500).json({ error: err });
     }
 })
+
 
 
 module.exports = router;
