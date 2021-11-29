@@ -1,20 +1,14 @@
-
 // Routes to be made (create, edit)
 const express = require('express');
 const router = express.Router();
 let validateJWT = require('../middleware/validate-jwt');
-
 const { Game } = require('../models');
+
+
 
 router.post('/create', validateJWT, async (req, res) => {
     const { name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags } = req.body.game;
     const { id } = req.user;
-
-const {Game} = require('../models');
-
-router.post('/create', validateJWT, async (req, res) => {
-    const {name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags} = req.body.game;
-    const {id} = req.user;
 
     const gameEntry = {
         name,
@@ -33,13 +27,12 @@ router.post('/create', validateJWT, async (req, res) => {
         res.status(200).json(newGame);
     } catch (err) {
         res.status(500).json({ error: err });
-        res.status(500).json({error: err});
+        res.status(500).json({ error: err });
     }
 });
 
 router.put('/edit=:gameId', validateJWT, async (req, res) => {
     const { name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags } = req.body.game;
-    const {name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags} = req.body.game;
     const gameId = req.params.gameId;
     const userId = req.user.id;
 
@@ -70,11 +63,12 @@ router.put('/edit=:gameId', validateJWT, async (req, res) => {
 })
 
 
-router.get('/all', async (req, res) => {
+router.get('/all', validateJWT, async (req, res) => {
+    const ownerId = req.user.id;
     try {
-        const Games = await Games.findAll({
+        const Games = await Game.findAll({
             where: {
-                owner_id: req.user.id
+                owner_id: ownerId
             }
         })
         res.status(200).json({
@@ -88,12 +82,12 @@ router.get('/all', async (req, res) => {
     }
 })
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateJWT, async (req, res) => {
+    const gameId = req.params.id;
     try {
         const Games = await Game.findOne({
             where: {
-                id: req.params.id,
-                owner_id: req.user.id,
+                id: gameId
             }
         })
         res.status(200).json({
@@ -107,7 +101,7 @@ router.get('/:id', async (req, res) => {
     }
 })
 
-router.delete('/remove/:id', async (req, res) => {
+router.delete('/remove/:id', validateJWT, async (req, res) => {
     const ownerId = req.user.id;
     const gameId = req.params.id;
 
@@ -129,9 +123,5 @@ router.delete('/remove/:id', async (req, res) => {
 })
 
 
-
-        res.status(500).json({error: err});
-    }
-})
 
 module.exports = router;
