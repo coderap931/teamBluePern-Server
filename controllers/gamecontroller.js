@@ -63,7 +63,7 @@ router.put('/edit=:gameId', validateJWT, async (req, res) => {
 })
 
 
-router.get('/all', validateJWT, async (req, res) => {
+router.get('/all', async (req, res) => {
     const ownerId = req.user.id;
     try {
         const Games = await Game.findAll({
