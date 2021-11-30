@@ -1,29 +1,16 @@
 const { Sequelize } = require('sequelize');
 
-// Initialize sequelize
+//* Initialize sequelize
 
 //! |  How to:  |
 //! |  Activate your database profile. |
-//TODO To activate your databate profile, uncomment the appropriate line below under line 10:"DATABASE CONFIGURATION PROFILES"
-//TODO When done for the day, comment out the line again. This allows us to not constantly resolve conflicts when merging.
+//TODO To activate your databate profile, call in the correct database profile via "process.env.${const of your database password}"
+//TODO When done for the day, replace line 10 of this file with line 9 uncommented. This allows us to not constantly resolve conflicts when merging.
+// const db = new Sequelize("postgres://postgres:${process.env.****password for your database****}@localhost:5432/${process.env.dbName}");
+const db = new Sequelize("postgres://postgres:${process.env.****password for your database****}@localhost:5432/${process.env.dbName}");
 
 //! |  DATABASE CONFIGURATION PROFILES  |
-//TODO - Uncomment your profile you're using.
-
-//! ADAM
-//* Adam's GamingTower
-//const db = new Sequelize("postgres://postgres:5d170bf185294620b01d4a0dbda02af1@localhost:5432/teamBluePern");
-
-//! ALEX
-//* Alex's Main PC
-//const db = new Sequelize("postgres://postgres:46acef601cb74c059efd3b9e39e23e9e@localhost:5432/teamBluePern");
-//* Alex's Old Dusty Dell Laptop
-// const db = new Sequelize("postgres://postgres:gamersriseup@localhost:5432/teamBluePern");
-//* Alex's Aero Laptop
-// const db = new Sequelize("postgres://postgres:gamersriseup@localhost:5432/teamBluePern");
-
-//! JAYLEN
-//* Jaylens database
-//const db = new Sequelize("postgres://postgres:562613@localhost:5432/teamBluePern");
+//TODO - Profiles have moved to our .env file!
+//* Reference the .env to determine which profile to use.
 
 module.exports = db;

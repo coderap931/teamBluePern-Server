@@ -122,6 +122,4 @@ router.delete('/remove/:id', validateJWT, async (req, res) => {
     }
 })
 
-
-
 module.exports = router;
