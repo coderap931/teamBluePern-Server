@@ -31,15 +31,32 @@ router.post('/create', validateJWT, async (req, res) => {
     }
 });
 
-router.put('/edit=:gameId', validateJWT, async (req, res) => {
+router.get('/editdeleteall', validateJWT, async (req, res) => {
+    const { id } = req.user;
+    try {
+        const query = {
+            where: {
+                owner_id: id,
+            }
+        };
+        const gamesList = await Game.findAll(query);
+        res.status(200).json(gamesList);
+    } catch (error) {
+        res.status(500).json({
+            message: `Game could not be found: ${error}`
+        })
+    }
+})
+
+router.put('/edit/:gameId', validateJWT, async (req, res) => {
     const { name, boxart, gamedescription, esrbrating, reviewrating, reviewdescription, platforms, tags } = req.body.game;
     const gameId = req.params.gameId;
-    const userId = req.user.id;
+    const { id } = req.user;
 
     const query = {
         where: {
             id: gameId,
-            owner_id: userId,
+            owner_id: id,
         }
     }
 
@@ -64,17 +81,9 @@ router.put('/edit=:gameId', validateJWT, async (req, res) => {
 
 
 router.get('/all', async (req, res) => {
-    const ownerId = req.user.id;
     try {
-        const Games = await Game.findAll({
-            where: {
-                owner_id: ownerId
-            }
-        })
-        res.status(200).json({
-            games: Games,
-            message: "games fetched"
-        })
+        const gamesList = await Game.findAll();
+        res.status(200).json(gamesList);
     } catch (error) {
         res.status(500).json({
             message: `Game could not be found: ${error}`
@@ -82,41 +91,36 @@ router.get('/all', async (req, res) => {
     }
 })
 
-router.get('/:id', validateJWT, async (req, res) => {
-    const gameId = req.params.id;
+router.get('/:gameId', async (req, res) => {
+    const gameId = req.params.gameId;
     try {
-        const Games = await Game.findOne({
+        const query = {
             where: {
-                id: gameId
+                id: gameId,
             }
-        })
-        res.status(200).json({
-            games: Games,
-            message: "Game fetched"
-        })
+        };
+        const gameReturned = await Game.findOne(query);
+        res.status(200).json(gameReturned);
     } catch (error) {
         res.status(500).json({
-            message: `Game not found: ${error}`
+            message: `Game could not be found: ${error}`
         })
     }
 })
 
-router.delete('/remove/:id', validateJWT, async (req, res) => {
-    const ownerId = req.user.id;
-    const gameId = req.params.id;
+router.delete('/remove/:gameId', validateJWT, async (req, res) => {
+    const gameId = req.params.gameId;
+    const { id } = req.user;
 
     try {
         const query = {
             where: {
                 id: gameId,
-                owner_id: ownerId
+                owner_id: id,
             }
         };
-
-        await Game.destroy(query);
-        res.status(200).json({
-            message: "Game successfully removed"
-        });
+        const result = await Game.destroy(query);
+        res.status(200).json(result);
     } catch (err) {
         res.status(500).json({ error: err });
     }
