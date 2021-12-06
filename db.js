@@ -1,18 +1,16 @@
-const {Sequelize} = require('sequelize');
+const { Sequelize } = require('sequelize');
 
-// Initialize sequelize
-//TODO - Change the database name and password
-// const db = new Sequelize("postgres://postgres:[PASSWORDchangeHERE]@localhost:5432/[DATABASEnameHERE]");
-//! |  ACTIVE SEQUELIZE PROFILE  |
-const db = new Sequelize("postgres://postgres:3b04286994094749b256047b28aae114@localhost:5432/teamBluePern");
-// ______________________________
-// |                              |
-//! |  DATABASE DIFFERENT CONFIGURATIONS   |
-//* Alex's Dell Laptop
-// const db = new Sequelize("postgres://postgres:gamersriseup@localhost:5432/teamBluePern");
-//* Alex's Aero Laptop
-// const db = new Sequelize("postgres://postgres:gamersriseup@localhost:5432/teamBluePern");
+//* Initialize sequelize
 
+//! |  How to:  |
+//! |  Activate your database profile. |
+//TODO To activate your databate profile, call in the correct database profile via "process.env.${const of your database password}"
+//TODO When done for the day, replace line 10 of this file with line 9 uncommented. This allows us to not constantly resolve conflicts when merging.
+// const db = new Sequelize(`postgres://postgres:${process.env.****password for your database****}@localhost:5432/${process.env.dbName}`);
+const db = new Sequelize(`postgres://postgres:${process.env.AlexMainPW}@localhost:5432/${process.env.dbName}`);
 
+//! |  DATABASE CONFIGURATION PROFILES  |
+//TODO - Profiles have moved to our .env file!
+//* Reference the .env to determine which profile to use.
 
 module.exports = db;
