@@ -36,25 +36,23 @@ Completion Date: WIP / [completion date]
 Server components: games table, model, and controller
  
 
-**Team Member #2  [Alex Myers]**
+__**Team Member #2:  [Alex Myers]**__
 
               **Github:** https://github.com/Alex-Lee-Myers
-              **LinkedIn:** linkedin.com/in/alexleemyers
+              **LinkedIn:** https://linkedin.com/in/alexleemyers
               **Portfolio:** https://alex-lee-myers.github.io/
 
 **Assigned Tasks**
 
 **Endpoint:** /user/register
-**Completion Date:** WIP / [completion date]
-11/26: Models and controller for registration/sign-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
-11/27: Debugged registration/sign-in. Fully functioning. Jaylen and Adam now able to test their endpoints. 
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
+__Completion Date:__ 11/27
+*11/26:* Models and controller for registration/sign-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
+*11/27:* Debugged registration/sign-in. Fully functioning. Jaylen and Adam now able to test their endpoints.
 
 **Endpoint:** /user/login
-Completion Date: WIP / [completion date]
-11/26: Models and controller for log-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
-11/27: Debugged log-in. Fully functioning. Jaylen and Adam now able to test their endpoints. 
+__Completion Date:__ 11/27
+*11/26:* Models and controller for log-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
+*11/27:* Debugged log-in. Fully functioning. Able to login with either/both email and username. Jaylen and Adam now able to test their endpoints. 
 
 **Server components:** app, index, users table (model/user+controller/usercontroller),  and middleware (header+validateJWT).
  
