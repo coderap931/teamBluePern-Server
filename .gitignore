@@ -1,8 +1,8 @@
 
 *.env
-//ignore all node_modules files
+//ignore all node_modules file
 node_modules/**
-//ignore all .git files
+//ignore all .git file
 .git/**
 
 
