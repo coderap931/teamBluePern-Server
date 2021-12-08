@@ -7,7 +7,7 @@ const { Sequelize } = require('sequelize');
 //* Adam's GamingTower
 //const db = new Sequelize("postgres://postgres:5d170bf185294620b01d4a0dbda02af1@localhost:5432/teamBluePern");
 // Jaylens database
-//const db = new Sequelize("postgres://postgres:562613@localhost:5432/teamBluePern");
+const db = new Sequelize("postgres://postgres:562613@localhost:5432/teamBluePern");
 
 // const db = new Sequelize("postgres://postgres:5d170bf185294620b01d4a0dbda02af1@localhost:5432/teamBluePern");
 
