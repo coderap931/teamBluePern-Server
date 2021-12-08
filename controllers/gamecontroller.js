@@ -82,17 +82,21 @@ router.put('/edit/:gameId', validateJWT, async (req, res) => {
 
 router.get('/all', async (req, res) => {
     try {
-        const gamesList = await Game.findAll();
-        res.status(200).json(gamesList);
+        const Games = await Game.findAll({
+        })
+        res.status(200).json({
+            games: Games,
+            message: "games fetched"
+        })
     } catch (error) {
         res.status(500).json({
-            message: `Game could not be found: ${error}`
+            message: `Games could not be found: ${error}`
         })
     }
 })
 
-router.get('/:gameId', async (req, res) => {
-    const gameId = req.params.gameId;
+router.get('/:id', async (req, res) => {
+    const gameId = req.params.id;
     try {
         const query = {
             where: {
