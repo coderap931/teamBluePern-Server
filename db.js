@@ -27,5 +27,4 @@ const db = new Sequelize(process.env.DATABASE_URL, {
 //TODO Change back to Heroku Database before committing!
 //! END OF LOCAL DATABASE
 
-
 module.exports = db;
