@@ -63,13 +63,9 @@ router.put('/edit=:gameId', validateJWT, async (req, res) => {
 })
 
 
-router.get('/all', validateJWT, async (req, res) => {
-    const ownerId = req.user.id;
+router.get('/all', async (req, res) => {
     try {
         const Games = await Game.findAll({
-            where: {
-                owner_id: ownerId
-            }
         })
         res.status(200).json({
             games: Games,
@@ -77,12 +73,12 @@ router.get('/all', validateJWT, async (req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            message: `Game could not be found: ${error}`
+            message: `Games could not be found: ${error}`
         })
     }
 })
 
-router.get('/:id', validateJWT, async (req, res) => {
+router.get('/:id', async (req, res) => {
     const gameId = req.params.id;
     try {
         const Games = await Game.findOne({
