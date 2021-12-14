@@ -8,51 +8,37 @@
 
               JsonWebToken, Bcrypt, Express, Node.js, and PostgreSQL
 ----
-## Adam Patrick
+Team Member #1  [Adam Patrick]
 
-| Portfolio  Sites | Direct Link |
-| ------ | ------ |
-| GitHub | [https://github.com/coderap931][Adam-Github] |
-| LinkedIn | [https://www.linkedin.com/in/adam-patrick-06a970159/][Adam-LinkedIn] |
-| PokeRandom | [https://coderap931.github.io/pokeRandom/][Adam-Pokemon] |
-| GiphySearch | [https://giphyapi-afc12.web.app/][Adam-Giphy] |
+        Github: https://github.com/coderap931
+        LinkedIn: https://www.linkedin.com/in/adam-patrick-06a970159/
+        Portfolio links: https://coderap931.github.io/
 
-### Assigned Tasks
+Assigned Tasks
 
-**Endpoint:** /game/create    
-**Completion Date:** WIP / [completion date]
+Git Master
+Completion Date: Once a Git Master, always a Git Master
 
-| Date | Files, Commits and Comments |
-| ------ | ------ |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
+Endpoint: /game/create
+Completion Date: Completed 11/29
 
-**Endpoint:** /game/edit   
-**Completion Date:** WIP / [completion date]
+Endpoint: /game/edit
+Completion Date: Completed 11/29
 
-| Date | Files, Commits and Comments |
-| ------ | ------ |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
+Endpoint: /game/delete
+Completion Date: Completed 11/29
 
-**Endpoint:** /game/delete    
-**Completion Date:** WIP / [completion date]
+Client Components: 
+-GameCreateModal.js: Initial completed pass 12/1, no bugs found to date
+-GameEditDeleteModal.js: Initial completed pass 12/1, minor styling changes and relocation of certain components to parent elements 12/4
+-GameUpdateModal.js: Initial completed pass 12/1, minor styling changes and corrected props passes with team 12/9
 
-| Date | Files, Commits and Comments |
-| ------ | ------ |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
-| [date] | [focused items / files] */consider your commit message |
-
-**Additional Tasks**
-- Git Master
-
-**Client Components:** 
-- Games Table
-- Games Model
-- Games Controller
+Server components:
+-games table: 11/28
+-games model: 11/28
+-games controller for my routes: 11/28
+-headers middleware: 11/28
+ 
 ----
 ## Alex Myers
 | Portfolio  Sites | Direct Link |
