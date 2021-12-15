@@ -88,9 +88,9 @@ Server components:
 ## Jaylen Wilson
 | Portfolio  Sites | Direct Link |
 | ------ | ------ |
-| GitHub | [Link Needed][Jaylen-Github] |
-| LinkedIn | [Link Needed][Jaylen-LinkedIn] |
-| Portfolio | [Link Needed][Jaylen-Portfolio] |
+| GitHub | [https://github.com/Jaylenwilson][Jaylen-Github] |
+| LinkedIn | [www.linkedin.com/in/jaylenwilson12][Jaylen-LinkedIn] |
+| Portfolio | [https://jaylenwilson.github.io/][Jaylen-Portfolio] |
 
 ### Assigned Tasks
 
