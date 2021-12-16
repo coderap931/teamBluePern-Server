@@ -88,22 +88,25 @@ Server components:
 ## Jaylen Wilson
 | Portfolio  Sites | Direct Link |
 | ------ | ------ |
-| GitHub | [Link Needed][Jaylen-Github] |
-| LinkedIn | [Link Needed][Jaylen-LinkedIn] |
-| Portfolio | [Link Needed][Jaylen-Portfolio] |
+| GitHub | [https://github.com/Jaylenwilson][Jaylen-Github] |
+| LinkedIn | [www.linkedin.com/in/jaylenwilson12][Jaylen-LinkedIn] |
+| Portfolio | [https://jaylenwilson.github.io/][Jaylen-Portfolio] |
 
 ### Assigned Tasks
 
 **Endpoint:** /game/listAll    
 **Completion Date:** WIP
 | Date | Files, Commits and Comments |
-| ------ | ------ |
+| 09/28 | added the listAll endpoint to our servers game controller tested and debugged |
 | Date | Files, Commits and Comments |
+09/29 removed ValidateJWT from listAll endpoint. ValidateJWT is not required in listAll reason being we want users to view post without having an account.
+| Date | Files, Commits and Comments |
+
 
 **Endpoint:** /game/view/{id}    
 **Completion Date:** WIP / [completion date]
 | Date | Files, Commits and Comments |
-| ------ | ------ |
+|09/29 |Game controller endpoint for view by id test successful.  |
 | Date | Files, Commits and Comments |
 
 Server components: 
