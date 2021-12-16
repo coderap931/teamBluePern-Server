@@ -27,7 +27,6 @@ router.post('/create', validateJWT, async (req, res) => {
         res.status(200).json(newGame);
     } catch (err) {
         res.status(500).json({ error: err });
-        res.status(500).json({ error: err });
     }
 });
 
