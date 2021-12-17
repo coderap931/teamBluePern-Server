@@ -1,5 +1,8 @@
 
-# hiding our node modules folder
-/node_modules
-# hiding the .env file
-. ./.env
+*.env
+//ignore all node_modules file
+node_modules/**
+//ignore all .git file
+.git/**
+
+

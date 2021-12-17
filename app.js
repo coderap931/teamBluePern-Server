@@ -16,8 +16,8 @@ db.authenticate()
     .then(() => db.sync())
 
     .then(() => {
-    app.listen(3000, () =>
-        console.log(`[Server: ] App is listening on Port ${3000}`)
+    app.listen(process.env.PORT, () =>
+        console.log(`[Server: ] App is listening on Port ${process.env.PORT}`)
     );
 
     })
@@ -25,5 +25,4 @@ db.authenticate()
         console.log(`[Server: ] Server Crashed. Error is = ${err}`);
         console.error(err);
     });
-// testing push
 
