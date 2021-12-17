@@ -13,22 +13,22 @@ const validateJWT = async (req, res, next) => {
         const result = authorization.includes("Bearer") ? authorization.split(" ")[1] : authorization
         console.log(result)
         //this console log works
-        const payload = authorization ? jwt.verify( //failing starts here
+        const payload = authorization ? jwt.verify( 
                 result,
                 process.env.JWT_SECRET
             )
             : undefined;
 
-        console.log("payload.id -->", payload.id); // doesnt get to this console log
+        console.log("payload.id -->", payload.id); 
 
         if (payload) {
-            let foundUser = await User.findOne({ where: { id: payload.id } }); //"property id does not exist"
+            let foundUser = await User.findOne({ where: { id: payload.id } }); 
             console.log("foundUser -->", foundUser);
 
             if (foundUser) {
                 console.log("request -->", req);
                 req.user = foundUser;
-                next(); // this sort of acts like "return: false" to exit out of the loop on success, but using a middleware function instead
+                next(); 
             } else {
                 res.status(400).send({ message: "Not Authorized" });
             }
