@@ -39,6 +39,7 @@ Server components:
 -games controller for my routes: 11/28
 -headers middleware: 11/28
  
+
 ----
 ## Alex Myers
 | Portfolio  Sites | Direct Link |
@@ -128,4 +129,3 @@ Server components:
    [Jaylen-LinkedIn]: <http://www.google.com>
    [Jaylen-Portfolio]: <http://www.google.com>
    [LocalHostInstructions]: <https://github.com/coderap931/teamBluePern-Client/blob/develop/src/helpers/LocalhostInstructions.md>
-

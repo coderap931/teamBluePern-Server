@@ -25,5 +25,4 @@ db.authenticate()
         console.log(`[Server: ] Server Crashed. Error is = ${err}`);
         console.error(err);
     });
-// testing push
 

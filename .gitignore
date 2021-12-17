@@ -1,2 +1,5 @@
-node_modules/
 *.env
+//ignore all node_modules file
+node_modules/**
+//ignore all .git file
+.git/**
