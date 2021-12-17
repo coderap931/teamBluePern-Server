@@ -33,6 +33,7 @@ const Game = db.define("game", {
     tags: {
         type: DataTypes.STRING,
         allowNull: false,
+        
     },
     owner_id: {
         type: DataTypes.INTEGER,
