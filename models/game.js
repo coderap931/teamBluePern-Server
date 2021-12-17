@@ -7,11 +7,11 @@ const Game = db.define("game", {
         allowNull: false,
     },
     boxart: { //URL for picture for now, change to picture upload later if possible
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false,
     },
     gamedescription: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false,
     },
     esrbrating: {
@@ -23,7 +23,7 @@ const Game = db.define("game", {
         allowNull: false,
     },
     reviewdescription: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(1000),
         allowNull: false,
     },
     platforms: {
