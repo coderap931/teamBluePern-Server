@@ -1,6 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 //! |  How to:  |
+
 //! |  Switch between the Heroku Database and Localhost databse |
 //*  
 //! HEROKU DATABASE
@@ -14,6 +15,7 @@ const { Sequelize } = require('sequelize');
 //         }
 //     }
 // });
+
 //TODO: Uncomment the Heroku Database before committing. Comment the Localhost Database. Message Adam for testing Heroku side(?) <-- Not sure how to incorporate Heroku test fully. 
 //! END OF HEROKU DATABASE
 

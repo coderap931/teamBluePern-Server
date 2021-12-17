@@ -1,4 +1,3 @@
-// Routes to be made (create, edit)
 const express = require('express');
 const router = express.Router();
 let validateJWT = require('../middleware/validate-jwt');
@@ -27,7 +26,6 @@ router.post('/create', validateJWT, async (req, res) => {
         res.status(200).json(newGame);
     } catch (err) {
         res.status(500).json({ error: err });
-        res.status(500).json({ error: err });
     }
 });
 
@@ -39,8 +37,8 @@ router.get('/editdeleteall', validateJWT, async (req, res) => {
                 owner_id: id,
             }
         };
-        const gamesList = await Game.findAll(query);
-        res.status(200).json(gamesList);
+        const yourGamesList = await Game.findAll(query);
+        res.status(200).json(yourGamesList);
     } catch (error) {
         res.status(500).json({
             message: `Game could not be found: ${error}`
