@@ -1,79 +1,131 @@
-Project Name
+# GameChest
 
-              [Brief description of project build]  *This will be different between client and server.  It can be detailed as you see fit (look over other ReadMe files for examples)
+>  A server backend for our GameChest client that consists of Express, Node.js, and Postgresql. 
+>  It consists of two tables total. One is our Users database consisting of those who register.
+>  We have a Games database that encompasses all the content that is posted and created. 
 
-Technology Used:
+**Technology Used:**
 
-              [ note technology and purposes ]
-
-**Team Member #1  [Adam Patrick]**
+              JsonWebToken, Bcrypt, Express, Node.js, and PostgreSQL
+----
+Team Member #1  [Adam Patrick]
 
         Github: https://github.com/coderap931
         LinkedIn: https://www.linkedin.com/in/adam-patrick-06a970159/
-        Portfolio links: (PokeRandom) -- https://coderap931.github.io/pokeRandom/ || (CSS Creature) -- https://codepen.io/coderap931/full/GRmbBeW || (GIPHY Search) -- https://giphyapi-afc12.web.app/
+        Portfolio links: https://coderap931.github.io/
 
 Assigned Tasks
 
 Git Master
+Completion Date: Once a Git Master, always a Git Master
 
 Endpoint: /game/create
-Completion Date: WIP / [completion date]
-[date]: [focused items / files] */consider your commit message
-[date]: [focused items / files]
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
+Completion Date: Completed 11/29
 
 Endpoint: /game/edit
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
-
-Server components: games table, model, and controller
- 
-
-__**Team Member #2:  [Alex Myers]**__
-
-              **Github:** https://github.com/Alex-Lee-Myers
-              **LinkedIn:** https://linkedin.com/in/alexleemyers
-              **Portfolio:** https://alex-lee-myers.github.io/
-
-**Assigned Tasks**
-
-**Endpoint:** /user/register
-__Completion Date:__ 11/27
-*11/26:* Models and controller for registration/sign-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
-*11/27:* Debugged registration/sign-in. Fully functioning. Jaylen and Adam now able to test their endpoints.
-
-**Endpoint:** /user/login
-__Completion Date:__ 11/27
-*11/26:* Models and controller for log-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. 
-*11/27:* Debugged log-in. Fully functioning. Able to login with either/both email and username. Jaylen and Adam now able to test their endpoints. 
-
-**Server components:** app, index, users table (model/user+controller/usercontroller),  and middleware (header+validateJWT).
- 
-
-Team Member #3  [Jaylen Wilson]
-
-              GitHub, LinkedIn, and Portfolio links
-
-Assigned Tasks
-
+Completion Date: Completed 11/29
 
 Endpoint: /game/delete
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
+Completion Date: Completed 11/29
 
-Endpoint: /game/listAll
-Completion Date: WIP / [completion date]
-[date]: [focused items / files] */consider your commit message
-[date]: [focused items / files]
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
+Client Components: 
+-GameCreateModal.js: Initial completed pass 12/1, no bugs found to date
+-GameEditDeleteModal.js: Initial completed pass 12/1, minor styling changes and relocation of certain components to parent elements 12/4
+-GameUpdateModal.js: Initial completed pass 12/1, minor styling changes and corrected props passes with team 12/9
 
-Endpoint: /game/view/{id}
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
+Server components:
+-games table: 11/28
+-games model: 11/28
+-games controller for my routes: 11/28
+-headers middleware: 11/28
+ 
 
-Server components: index model and controller
+----
+## Alex Myers
+| Portfolio  Sites | Direct Link |
+| ------ | ------ |
+| GitHub | [github.com/Alex-Lee-Myers][Alex-Github] |
+| LinkedIn | [linkedin.com/in/alexleemyers][Alex-LinkedIn] |
+| Portfolio | [alex-lee-myers.github.io/][Alex-Portfolio] |
+
+### Assigned Tasks
+
+**Endpoint:** /user/register   
+**Completion Date:** 12/4
+
+| Date | Files, Commits and Comments |
+| ------ | ------ |
+| *11/26* | Models and controller for registration/sign-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day.  |
+| *11/27:*  | 11/27: Debugged registration/sign-in. Fully functioning. Jaylen and Adam now able to test their endpoints.  |
+
+**Endpoint:** /user/login    
+**Completion Date:** 12/4
+
+| Date | Files, Commits and Comments |
+| ------ | ------ |
+| *11/26* | Models and controller for log-in first draft completed. ALl supporting files surrounding that (jwt, headers, server side app.js, index.js, etc) updated appropriately for testing on following day. |
+| *11/27:*  | Debugged log-in. Fully functioning. Jaylen and Adam now able to test their endpoints. |
+
+**Additional Tasks**
+
+| Date | Task Performed | Files, Commits and Comments |
+| ------ | ------ | ------ |
+| *12/4* | Heroku Deployment Began | Heroku deployment began. Due to user management issues from Heroku, Adam took over the deployment. Personal Heroku deployment performed later for practice.
+| *12/6* | LocalHost<->Heroku Setup | Debugged and setup a way to quickly switch between local and deployed testing. Local testing worked perfect, Heroku testing is a WIP and will be done with team.
+| *12/7* | LocalHost<->Heroku Testing Instructions | Created a [guide][LocalHostInstructions] on how to switch between LocalHost and Heroku fetches to test on all instances. Next up is how to properly do so for Heroku specifically with team.
+| *12/7* | ReadMe.md updated completely, reformatted | ReadMe.md updated completely. Reformatted to be more presentable and legible. Updated personal information and commits.
+| *12/7* | Team Updates Game Endpoints | In our session for the client debugging that end of our project, we discoverd our JsonWebToken was being applied in a couple Games endpoints not necessary. We eliminated those. Additionally, Adam made a great suggestion for our LocalHost<->Heroku Testing Instructions that I will be updating by end of day on 12/8.
+
+**Client components:**
+-   app.js
+-   index.js
+-   user table
+  - usermodel.js
+  - usercontroller.js
+-   middleware
+  - header.js
+  - validateJWT.js
+ ----
+## Jaylen Wilson
+| Portfolio  Sites | Direct Link |
+| ------ | ------ |
+| GitHub | [https://github.com/Jaylenwilson][Jaylen-Github] |
+| LinkedIn | [www.linkedin.com/in/jaylenwilson12][Jaylen-LinkedIn] |
+| Portfolio | [https://jaylenwilson.github.io/][Jaylen-Portfolio] |
+
+### Assigned Tasks
+
+**Endpoint:** /game/listAll    
+**Completion Date:** WIP
+| Date | Files, Commits and Comments |
+| 09/28 | added the listAll endpoint to our servers game controller tested and debugged |
+| Date | Files, Commits and Comments |
+09/29 removed ValidateJWT from listAll endpoint. ValidateJWT is not required in listAll reason being we want users to view post without having an account.
+| Date | Files, Commits and Comments |
+
+
+**Endpoint:** /game/view/{id}    
+**Completion Date:** WIP / [completion date]
+| Date | Files, Commits and Comments |
+|09/29 |Game controller endpoint for view by id test successful.  |
+| Date | Files, Commits and Comments |
+
+Server components: 
+- Index Model
+- Index Controller
+- [insert here]
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.)
+
+   [Adam-Github]: <https://github.com/joemccann/dillinger>
+   [Adam-LinkedIn]: <https://github.com/joemccann/dillinger.git>
+   [Adam-Pokemon]: <http://daringfireball.net>
+   [Adam-CSS]: <http://daringfireball.net/projects/markdown/>
+   [Adam-Giphy]: <https://github.com/markdown-it/markdown-it>
+   [Alex-Github]: <http://ace.ajax.org>
+   [Alex-LinkedIn]: <http://nodejs.org>
+   [Alex-Portfolio]: <http://twitter.github.com/bootstrap/>
+   [Jaylen-GitHub]: <http://www.google.com>
+   [Jaylen-LinkedIn]: <http://www.google.com>
+   [Jaylen-Portfolio]: <http://www.google.com>
+   [LocalHostInstructions]: <https://github.com/coderap931/teamBluePern-Client/blob/develop/src/helpers/LocalhostInstructions.md>
